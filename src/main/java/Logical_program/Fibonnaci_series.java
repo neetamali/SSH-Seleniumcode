@@ -18,7 +18,7 @@ public class Fibonnaci_series {
 			a=b;
 			b=c;
 			
-			System.out.println(a);
+			System.out.print(a+" ");
 			
 		}
 

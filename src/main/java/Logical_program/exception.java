@@ -13,7 +13,7 @@ public class exception {
 
 	  catch(Exception e)
 	        {
-	            System.out.println ("Divide by zero error");
+	            System.out.println ("Divide by zero error:  "+ e);
 	        }
 	 
 	        finally

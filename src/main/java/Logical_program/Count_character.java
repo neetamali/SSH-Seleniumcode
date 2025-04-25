@@ -13,7 +13,8 @@ class Count_character{
 		public static void main(String[] args)
 		{
 			String name = "Pratik Raut";
-			characterCount(name);
+			//characterCount(name);
+			countTheCharCount(name);
 		}
 		
 	
@@ -50,6 +51,30 @@ class Count_character{
 			System.out.println(entry.getKey() + " " + entry.getValue());
 		}
 	}
+		
+		public static void countTheCharCount(String name){
+			char[] namechar = name.toCharArray();
+			Map<Character, Integer> m= new HashMap<>();
+			
+			for(Character c: namechar) {
+				if(!m.containsKey(c)) {
+					m.put(c, 1);
+				} else {
+					m.put(c, m.get(c)+1);
+				}
+			}
+			Iterator itr = m.entrySet().iterator();
+			while(itr.hasNext()) {
+				System.out.println(itr.next());
+			}
+			System.out.println("************");
+			
+				for(Map.Entry<Character, Integer> s : m.entrySet()) {
+					System.out.println(s.getKey() +"   "+s.getValue());
+			
+			}
+			
+		}
 
 	
 }
